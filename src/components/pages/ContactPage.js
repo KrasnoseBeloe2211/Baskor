@@ -13,21 +13,19 @@ import phone_icon from '../../styles/phone.svg'
 import { Helmet } from 'react-helmet'
 
 export default function ContactPage({ data }) {
-  const [contactMenu, setContactMenu] = useState('contact_menu')
-  function openContactMenu() {
-    console.log('Открываем меню')
-    setContactMenu('contact_menu active')
-  }
-  function closeContactMenu() {
-    setContactMenu('contact_menu')
-  }
+	const [contactMenu, setContactMenu] = useState('contact_menu')
+	function openContactMenu() {
+		console.log('Открываем меню')
+		setContactMenu('contact_menu active')
+	}
+	function closeContactMenu() {
+		setContactMenu('contact_menu')
+	}
 
-  return (
+	return (
 		<>
-			<Helmet>
-				
-			</Helmet>
-			
+			<Helmet></Helmet>
+
 			<div className='App'>
 				<div className='background'></div>
 				<div className='container'>
@@ -38,11 +36,7 @@ export default function ContactPage({ data }) {
 							<div className='contact_address_cards'>
 								<div className='contact_adderss'>
 									<img alt='' src={map_icon} />
-									<p>
-										Ю117648, г. Москва, вн. тер. г. муниципальный округ
-										Чертаново Северное, мкр. Северное Чертаново, д. 5, к. Г,
-										помещ. 6Ц
-									</p>
+									<p>г. Москва, Научный проезд д.6</p>
 								</div>
 								<div className='contact_adderss'>
 									<img alt='' src={truck_icon} />

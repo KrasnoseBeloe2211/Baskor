@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function ProdTable({headers_prop, rows_prop}) {
+export default function ProdTable({ headers_prop, rows_prop }) {
 	const headers = headers_prop
 	const rows = rows_prop
 
@@ -13,7 +13,7 @@ export default function ProdTable({headers_prop, rows_prop}) {
 	return (
 		<div>
 			<h1>ХАРАКТЕРИСТИКИ</h1>
-			<table style={{ borderCollapse: 'collapse', width: '100%' }}>
+			<table style={{ borderCollapse: 'collapse', width: '80%' }}>
 				<thead>
 					<tr>
 						{headers.map((header, i) => (
@@ -43,21 +43,22 @@ export default function ProdTable({headers_prop, rows_prop}) {
 										backgroundColor: rowIndex % 2 === 0 ? '#fff' : '#f8f8f8',
 									}}
 								>
-									<input disabled
+									<input
+										disabled
 										style={{
 											width: '100%',
 											border: 'none',
 											background: 'transparent',
 											outline: 'none',
 										}}
-										value={cell}										
+										value={cell}
 									/>
 								</td>
 							))}
 						</tr>
 					))}
 				</tbody>
-			</table>	
-    </div>
+			</table>
+		</div>
 	)
 }
