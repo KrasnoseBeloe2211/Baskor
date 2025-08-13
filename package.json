@@ -44,6 +44,7 @@
 		"inlineCss": true
 	},
 	"devDependencies": {
+		"prerender-spa-plugin": "^3.4.0",
 		"react-snap": "^1.23.0"
 	}
 }
