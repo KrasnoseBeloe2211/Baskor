@@ -15,12 +15,17 @@ export default function AutoResizeTextArea({el}) {
 	}, []) 
 
 	return (
-		<textarea
-			ref={textareaRef}
-			defaultValue={initialText}
-			rows={1}
-      disabled			
-      className='textarea'
-		/>
+		// <textarea
+		// 	ref={textareaRef}
+		// 	defaultValue={initialText}
+		// 	rows={1}
+		//   disabled
+		//   className='textarea'
+		// />
+		<>
+			{el.split('\n').map((paragraph, i) => (
+				<p key={i}>{paragraph}</p>
+			))}
+		</>
 	)
 }
